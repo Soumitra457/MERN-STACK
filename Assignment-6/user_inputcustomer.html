@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+</head>
+<body>
+</body>
+<script>let customerArr = [];
+    let no_of_customer = Number(prompt('Please enter the number of customer'));
+    for(let i=0;i<no_of_customer;i++){
+        let name = String(prompt('Name : '));
+        let email = String(prompt('Email : '));
+        let phone = String(prompt('Phone No : '));
+        let no_of_times_shopped = Number(prompt('No Of Times Shopped : '));
+        let purchase_history = [];
+        for(let j=0;j<no_of_times_shopped;j++){
+            let date_of_purchase = String(prompt('Date of purchase : '));
+            let no_of_items_purchased = Number(prompt('No of items purchased'));
+            item_purchase = [];
+            for(let k=0;k<no_of_items_purchased;k++){
+                let product_name = String(prompt('Product Name'));
+                let product_price = Number(prompt('Product Price'));
+                let obj2 = {product_name,product_price};
+                item_purchase.push(obj2);
+            }
+            let obj1 = {date_of_purchase,no_of_items_purchased,item_purchase};
+            purchase_history.push(obj1);
+        }
+        let obj = {name,email,phone,no_of_times_shopped,purchase_history};
+        customerArr.push(obj);
+    }
+    let total_purchase_amount = (obj) =>{
+        let sum = 0;
+        for(let i=0;i<obj.purchase_history.length;i++){
+            for(let j=0;j<obj.purchase_history[i].item_purchase.length;j++){
+                sum = sum + obj.purchase_history[i].item_purchase[j].product_price;
+            }
+        }
+        return sum;
+    }
+    console.log(`Q1. Customer Details `);
+    for (let i = 0; i < customerArr.length; i++) {
+        console.log(`name : ${customerArr[i].name}`);
+        console.log(`email : ${customerArr[i].email}`);
+        console.log(`phone : ${customerArr[i].phone}`);
+        for (let j = 0; j < customerArr[i].purchase_history.length; j++) {
+            console.log(`purchase date : ${customerArr[i].purchase_history[j].date_of_purchase}`);
+            for (let k = 0; k < customerArr[i].purchase_history[j].item_purchase.length; k++) {
+            console.log(`product name : ${customerArr[i].purchase_history[j].item_purchase[k].product_name}`);
+            console.log(`product price : ${customerArr[i].purchase_history[j].item_purchase[k].product_price}`);
+            }
+        }
+    }
+    console.log('\n');
+    console.log("Q2. Name of the customers who has shopped more than 5 times");
+    customer_purchase_time_more_than_five = customerArr.filter(item=>item.no_of_times_shopped>5);
+    customer_purchase_time_more_than_five.forEach(value=>{
+        console.log(value.name);
+    })
+    console.log('\n');
+    console.log("Q3. Name And Total Purchase Amount All The Shopping Customer Did");
+    customerArr.forEach(value=>{
+        console.log(`${value.name}-${total_purchase_amount(value)}`);
+    })
+    console.log('\n');</script>
+</html>
