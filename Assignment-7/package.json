@@ -1,0 +1,14 @@
+{
+  "name": "user-details",
+  "version": "1.0.0",
+  "description": "A simple curd",
+  "main": "shop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soumitra Behera",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
