@@ -1,0 +1,14 @@
+{
+  "name": "api-cart",
+  "version": "1.0.0",
+  "description": "get data from api",
+  "main": "cart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soumitra Behera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

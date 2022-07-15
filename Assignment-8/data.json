@@ -1,0 +1,32 @@
+[
+    {
+        "product_id":101,
+        "product_name":"Jeans",
+        "quantity":7,
+        "price":1500
+    },
+    {
+        "product_id":201,
+        "product_name":"Tshirt",
+        "quantity":5,
+        "price":400
+    },
+    {
+        "product_id":301,
+        "product_name":"Shoes",
+        "quantity":3,
+        "price":3000
+    },
+    {
+        "product_id":401,
+        "product_name":"Joggers",
+        "quantity":4,
+        "price":6000
+    },
+    {
+        "product_id":501,
+        "product_name":"Jackets",
+        "quantity":2,
+        "price":4000
+    }
+]
