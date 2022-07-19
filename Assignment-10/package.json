@@ -1,0 +1,15 @@
+{
+  "name": "api.js",
+  "version": "1.0.0",
+  "description": "mongose",
+  "main": "app.js",
+  "scripts": {
+    "test": "\"\""
+  },
+  "author": "Soumitra Behera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.5"
+  }
+}
