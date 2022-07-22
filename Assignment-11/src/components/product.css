@@ -1,0 +1,46 @@
+.product_cart{
+    width:27%;
+    float:left;
+    margin:20px;
+    box-shadow:8px 8px 8px 8px #ccc;
+    padding:15px;
+    background-color: #efefa0;
+}
+
+.product_name{
+    font-weight: bold;
+    font-size: 25px;
+    color:#d8512c;
+}
+
+
+.product_image{
+    width:100%;
+}
+
+.product_image img{
+    width:100%;
+}
+
+.product_price{
+    font-weight: bold;
+    font-size: 16px;
+    width:50%;
+    float:left;
+}
+
+.button_div{
+    text-align: right;
+    width:100%;
+}
+
+.buy_now{
+    background: #e59062;
+    border: 2px solid #ee835f;
+    margin-top: 20px;
+    padding: 10px;
+    font-weight:bold;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+}
